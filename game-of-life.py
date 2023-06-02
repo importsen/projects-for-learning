@@ -11,6 +11,8 @@ columns = 10
 
 grid = np.zeros((rows, columns), dtype=int)
 
+simulation_running = False
+
 def update_grid():
     global grid 
     new_grid = grid.copy() 
@@ -56,7 +58,8 @@ while True:
         update_grid()
         print_grid()
 
-    time.sleep(1)
     # Add an exit condition
     if user_input == "exit":
         break
+
+    time.sleep(1)
